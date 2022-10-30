@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'prerender-mat-form-field';
+  form: FormGroup;
+  output?: Object
+
+  constructor(builder: FormBuilder) {
+    this.form = builder.group({
+      name: new FormControl('Demo name')
+    });
+  }
+
+  sendForm(): void {
+    this.output = this.form.value;
+  }
 }
