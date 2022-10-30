@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Testing Prerendering</h1>
+    <form [formGroup]="form" (ngSubmit)="sendForm()">
+      <mat-form-field>
+        <input type="text" formControlName="name" matInput>
+      </mat-form-field>
+      <div>
+        <button type="submit">Send</button>
+      </div>
+    </form>
+    <div>
+      {{output | json}}
+    </div>
+  </div>

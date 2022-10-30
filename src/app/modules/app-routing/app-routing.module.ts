@@ -1,12 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from 'src/app/app.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: AppComponent
+    loadChildren: () => import('../form/form.module').then(m => m.FormModule)
   }
 ]
 

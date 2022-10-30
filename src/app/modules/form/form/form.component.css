@@ -1,0 +1,7 @@
+.container {
+    padding: 25px;
+}
+
+.container > form > * {
+    margin: 25px;
+}
