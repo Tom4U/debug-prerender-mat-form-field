@@ -5,12 +5,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormRoutingModule } from './form-routing.module';
 import { FormComponent } from './form/form.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
 @NgModule({
   declarations: [
-    FormComponent
+    FormComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
